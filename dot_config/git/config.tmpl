@@ -1,6 +1,10 @@
+{{- $email := "jeisonsmv@gmail.com" -}}
+{{- if eq .chezmoi.os "windows" -}}
+{{-   $email = "jeison.martinez@trip-arc.com" -}}
+{{- end -}}
 [user]
 	name = Jeison Martinez
-	email = jeisonsmv@gmail.com
+	email = {{ $email }}
 
 [commit]
     template = ~/.config/git/template.txt
