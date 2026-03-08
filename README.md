@@ -14,7 +14,7 @@ sudo apt install chezmoi  # Debian/Ubuntu
 # or
 sudo pacman -S chezmoi  # Arch Linux
 # or
-winget install --id JerzyGajewski.Chezmoi  # Windows
+choco install chezmoi  # Windows
 
 # 2. Apply this repository
 chezmoi init https://github.com/JasonSMV/dotfiles.git
