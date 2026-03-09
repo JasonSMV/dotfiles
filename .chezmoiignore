@@ -3,4 +3,5 @@ komorebi.json
 komorebi.bar.json
 komorebi.bar.monitor2.json
 dot_config/whkdrc
+dot_config/yasb
 {{ end }}
