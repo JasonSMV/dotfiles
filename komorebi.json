@@ -3,74 +3,59 @@
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
-  "mouse_follows_focus": true,
-  "default_workspace_padding": 20,
-  "default_container_padding": 20,
-  "border": true,
-  "border_width": 8,
-  "border_offset": -1,
-  "display_index_preferences": {
-    "0": "BOE0AC1-4&862498a&0&UID8388688",
-    "1": "SPT6B0B-4&862498a&0&UID41031"
+  "transparency": false,
+    "transparency_alpha": 225,
+    "default_workspace_padding": 1,
+    "default_container_padding": 1,
+    "border": true,
+    "border_width": 2,
+    "border_offset": -1,
+    "animation": {
+      "enabled": false,
+      "duration": 100,
+      "fps": 160,
+      "style": "EaseOutBack"
   },
-  "bar_configurations": [
-    "$Env:USERPROFILE/komorebi.bar.json",
-    "$Env:USERPROFILE/komorebi.bar.monitor2.json"
-  ],
-  "theme": {
-    "palette": "Base16",
-    "name": "Ashes",
-    "unfocused_border": "Base03",
-    "bar_accent": "Base0D"
-  },
-  "monitors": [
-    {
-      "workspaces": [
-        {
-          "name": "I",
-          "layout": "BSP"
-        },
-        {
-          "name": "II",
-          "layout": "VerticalStack"
-        },
-        {
-          "name": "III",
-          "layout": "HorizontalStack"
-        },
-        {
-          "name": "IV",
-          "layout": "UltrawideVerticalStack"
-        },
-        {
-          "name": "V",
-          "layout": "Rows"
-        },
-        {
-          "name": "VI",
-          "layout": "Grid"
-        },
-        {
-          "name": "VII",
-          "layout": "RightMainVerticalStack"
-        }
-      ]
+    "theme": {
+      "palette": "Catppuccin",
+      "name": "Mocha",
+      "unfocused_border": "Sapphire",
+      "bar_accent": "Rosewater",
+      "single_border": "Mauve"
     },
-    {
-      "workspaces": [
-        {
-          "name": "1",
-          "layout": "BSP"
-        },
-        {
-          "name": "2",
-          "layout": "VerticalStack"
-        },
-        {
-          "name": "3",
-          "layout": "HorizontalStack"
-        }
-      ]
-    }
-  ]
-}
+    "monitors": [
+      {
+        "workspaces": [
+          {
+            "name": "I",
+            "layout": "BSP"
+          },
+          {
+            "name": "II",
+            "layout": "VerticalStack"
+          },
+          {
+            "name": "III",
+            "layout": "HorizontalStack"
+          }
+        ]
+      },
+      {
+        "workspaces": [
+          {
+            "name": "Home",
+            "layout": "BSP"
+          },
+          {
+            "name": "2",
+            "layout": "VerticalStack"
+          },
+          {
+            "name": "3",
+            "layout": "HorizontalStack"
+          }
+    
+        ]
+      }
+    ]
+  }
