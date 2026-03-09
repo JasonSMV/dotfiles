@@ -1,0 +1,6 @@
+{{ if ne .chezmoi.os "windows" }}
+komorebi.json
+komorebi.bar.json
+komorebi.bar.monitor2.json
+dot_config/whkdrc
+{{ end }}

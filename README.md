@@ -43,6 +43,18 @@ chezmoi update
 chezmoi diff
 ```
 
+## Notes
+
+### Windows-specific Files
+
+The following files are Windows-only (managed via `.chezmoiignore`):
+- `komorebi.json` - Komorebi window manager config
+- `komorebi.bar.json` - Komorebi bar config (monitor 1)
+- `komorebi.bar.monitor2.json` - Komorebi bar config (monitor 2)
+- `dot_config/whkdrc` - whkd hotkey daemon config
+
+These files are ignored on non-Windows systems but remain in the source for cross-platform portability.
+
 ## Managing Your Dotfiles
 
 ```bash
