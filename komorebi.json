@@ -1,4 +1,3 @@
-{{- if eq .chezmoi.os "windows" -}}
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.40/schema.json",
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
@@ -75,4 +74,3 @@
     }
   ]
 }
-{{- end -}}

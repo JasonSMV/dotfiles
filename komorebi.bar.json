@@ -1,4 +1,3 @@
-{{- if eq .chezmoi.os "windows" -}}
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.40/schema.bar.json",
   "monitor": 0,
@@ -72,4 +71,3 @@
     }
   ]
 }
-{{- end -}}
