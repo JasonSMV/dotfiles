@@ -1,14 +1,14 @@
-# Bar For Komorebi
+# Bar For GlazeWM
 # For more information about configuration options, please visit the Wiki https://github.com/amnweb/yasb/wiki
 watch_stylesheet: True
 watch_config: False
 debug: True
 update_check: False
 show_systray: True
-komorebi:
-  start_command: "komorebi.exe start"
-  stop_command: "komorebi.exe command exit"
-  reload_command: "komorebi.exe command reload-configuration"
+glazewm:
+  start_command: "glazewm.exe start"
+  stop_command: "glazewm.exe command wm-exit"
+  reload_command: "glazewm.exe command wm-exit && glazewm.exe start"
 bars:
   primary-bar:
     enabled: True
@@ -54,7 +54,8 @@ bars:
       left: [
         "power_menu",
         "media",
-        "komorebi_workspaces"
+        "glazewm_binding_mode",
+        "glazewm_workspaces"
       ]
       center: [
         "active_window"
@@ -316,15 +317,14 @@ widgets:
       show_battery: False
       show_volume: False
       show_network: False
-  komorebi_workspaces:
-    type: "komorebi.workspaces.WorkspaceWidget"
+  glazewm_workspaces:
+    type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
-      label_offline: "Komorebi Offline"
-      label_workspace_btn: "{index}"
-      label_workspace_active_btn: "{index}"
-      label_workspace_populated_btn: "{index}"
+      offline_label: "Offline"
       hide_if_offline: True
-      animation: True
+      monitor_exclusive: False 
+      enable_scroll_switching: False
+      animation: False
   glazewm_binding_mode:
     type: "glazewm.binding_mode.GlazewmBindingModeWidget"
     options:
