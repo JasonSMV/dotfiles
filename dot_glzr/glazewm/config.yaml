@@ -336,6 +336,8 @@ keybindings:
   - commands: ['wm-redraw']
     bindings: ['f13+shift+w']
 
+  # Apps 
+  
   # Launch CMD terminal. f13ernatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
@@ -345,7 +347,19 @@ keybindings:
   # Open Flow Launcher
   - commands: ['shell-exec C:\\Users\\devje\\AppData\\Local\\FlowLauncher\\Flow.Launcher.exe']
     bindings: ['f13+d']
+  
+  #Browser  
+  - commands: ['shell-exec brave']
+    bindings: ['f13+b']
     
+  # File explorer
+  - commands: ['shell-exec explorer']
+    bindings: ['f13+shift+f']
+    
+  # Lock computer
+  - commands: ['shell-exec rundll32.exe user32.dll,LockWorkStation']
+    bindings: ['f13+ctrl+l']
+  
   # Focus the next/previous active workspace defined in `workspaces` config.
   - commands: ['focus --next-active-workspace']
     bindings: ['f13+s', 'f13+tab']
@@ -404,4 +418,4 @@ keybindings:
   - commands: ['move --workspace 8', 'focus --workspace 8']
     bindings: ['f13+shift+8']
   - commands: ['move --workspace 9', 'focus --workspace 9']
-    bindings: ['f13+shift+9']
+    bindings: ['f13+shift+9'] 
