@@ -194,7 +194,7 @@ window_rules:
         window_title: { regex: "(Rename|Find and Replace|Search|Attach|Find|Debugger|Replace)" }
       # Float rider popups
       - window_process: { equals: "rider64" }
-        window_title: { regex: "(Search|Find|Attach|Debugger|Run/Debug|Replace|Rename|dotPeek64)" } 
+        window_title: { regex: "(Search|Find|Attach|Debugger|Run/Debug|Replace|Rename|dotPeek64|Checkout)" } 
         
        # handle ssms sql server
       - window_process: { equals: "SSMS" }
