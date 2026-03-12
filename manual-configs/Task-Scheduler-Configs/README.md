@@ -1,14 +1,9 @@
-![Import-Task](../Images/Import.png)
-
-![App-Path](../Images/App-Path.png)
-
-Use this folder for exported scheduled task XML files that launch tooling on logon.
+This folder for exported scheduled task XML files that launch tooling on logon.
 
 Suggested exports:
 
-- `komorebi.xml`
 - `yasb.xml`
-- `glazewm.xml` (if you are using GlazeWM on a machine)
+- `glazewm.xml`
 - `flow-launcher.xml`
 
 ## MANUAL Starting GlazeWM and AltSnap at Logon
@@ -51,3 +46,9 @@ Repeat Steps 1-4 with these differences:
 - **Description**: `Starts AltSnap with system tray`
 - **Program/script**: Browse to the AltSnap executable:
 - **Add arguments**: `--tray`
+
+
+![Import-Task](../Images/Import.png)
+
+![App-Path](../Images/App-Path.png)
+
