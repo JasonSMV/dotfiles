@@ -6,3 +6,6 @@ dot_config/whkdrc
 dot_config/yasb
 dot_glzr/glazewm
 {{ end }}
+
+manual-configs
+manual-configs/**
