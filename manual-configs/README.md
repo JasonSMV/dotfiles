@@ -5,7 +5,6 @@
 > 2. `$USER` means your Windows username.
 > 3. If `$PROFILE` does not exist, create it with `New-Item -Path $PROFILE -Type File -Force`.
 > 4. If script execution is blocked, run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine`.
-> 5. This folder is only for manual setup notes/screenshots/exports. Dotfiles already tracked by chezmoi are not duplicated here.
 
 ### Tools Used:
 
@@ -22,30 +21,7 @@
 
 ---
 
-### Preview:
-
-![PIC 1](Images/Updated-Dots-1.png)
-
-![PIC 2](Images/Updated-Dots-2.png)
-
-![PIC 3](Images/Updated-Dots-3.png)
-
-![PIC 4](Images/Updated-Dots-4.png)
-
-![PIC 5](Images/Updated-Dots-5.png)
-
----
-
-### Rice Setup Guide
-
-#### Managed by chezmoi (no duplicate in this folder)
-
-- Komorebi files: `komorebi.json`, `komorebi.bar.json`, `komorebi.bar.monitor2.json`
-- whkd file: `dot_config/whkdrc`
-- YASB files: `dot_config/yasb/config.yaml`, `dot_config/yasb/styles.css`
-- GlazeWM files: `dot_glzr/glazewm/config.yaml`, `dot_glzr/glazewm/README.md`
-
----
+### Setup Guide
 
 #### ExplorerPatcher
 
