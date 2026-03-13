@@ -11,12 +11,6 @@ This directory contains my personal GlazeWM configuration for Windows tiling win
 - **Startup**: Automatically launches `gat-gwm` and `yasb` on boot
 - **Gaps**: 10px inner gap, 6px outer gap
 
-#### Need GlazeWM Autotiler
-To install this, you have to install `rustup` and `cargo` then use the below command
-```
-cargo install --git https://github.com/Dutch-Raptor/GAT-GWM.git --features=no_console
-```
-
 ---
 
 ## Quick Reference
