@@ -12,6 +12,7 @@ Recommended Plugins
 - Clipboard+ - Change action to cb
 - Temp Cleaner d
 - Windows Terminal Profiles
+- Open windows search - Change action to t
 
 To apply the theme, navigate to `FlowLauncher` directory where it contains the necessary steps documented as images.
 
