@@ -62,7 +62,7 @@ For more information about configuration options, please visit their documentati
 * {
     font-size: 15px;
     color: var(--text);
-    font-weight: 610;
+    font-weight: 600;
     font-family: "JetBrainsMono Nerd Font";
     margin: 0;
     padding: 0;
@@ -79,14 +79,14 @@ For more information about configuration options, please visit their documentati
     margin: 0;
 }
 .icon {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
 }
 .widget .label {
     padding: 0px 2px;
 }
 .grouper-button {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
 }
 
@@ -171,7 +171,7 @@ For more information about configuration options, please visit their documentati
     border: none;
     padding:0 2px;
     margin: 0 2px 0 2px;
-    font-size: 14px;
+    font-size: 16px;
 }
 .glazewm-workspaces .ws-btn.active_populated,
 .glazewm-workspaces .ws-btn.active_empty {

@@ -51,8 +51,12 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left:
-        ["power_menu", "media", "glazewm_binding_mode", "glazewm_workspaces"]
+      left: [
+          "power_menu",
+          #"media",
+          "glazewm_binding_mode",
+          "glazewm_workspaces",
+        ]
       center: ["clock"]
       right: [
           "system-tray",
@@ -293,10 +297,10 @@ widgets:
     type: "yasb.systray.SystrayWidget"
     options:
       class_name: "systray"
-      label_collapsed: "\uf438"
-      label_expanded: "\uf44a"
+      label_collapsed: "\uf0c9"
+      label_expanded: "\uf00d"
       label_position: "left" # Can be "left" or "right"
-      icon_size: 13 # Can be any integer between 8 and 64
+      icon_size: 16 # Can be any integer between 8 and 64
       pin_click_modifier: "ctrl" # Can be "ctrl", "alt" or "shift"
       show_unpinned: True
       show_unpinned_button: False
