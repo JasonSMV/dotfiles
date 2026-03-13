@@ -12,7 +12,7 @@ glazewm:
 bars:
   primary-bar:
     enabled: True
-    screens: ['*']
+    screens: ["*"]
     class_name: "yasb-bar"
     alignment:
       position: "top"
@@ -51,28 +51,21 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: [
-        "power_menu",
-        "media",
-        "glazewm_binding_mode",
-        "glazewm_workspaces"
-      ]
-      center: [
-        "active_window"
-      ]
+      left:
+        ["power_menu", "media", "glazewm_binding_mode", "glazewm_workspaces"]
+      center: ["clock"]
       right: [
-        "system-tray",
-        "battery",
-        "wifi",
-        "volume",
-        "lines",
-        "sysinfo",
-        "notifications",
-        "open_meteo", 
-        "wallpapers",
-        "notes",
-        "clock"
-      ]
+          "system-tray",
+          "lines",
+          "sysinfo",
+          "notifications",
+          "wallpapers",
+          "volume",
+          "wifi",
+          "battery",
+          #"notes",
+          #"open_meteo"
+        ]
 widgets:
   open_meteo:
     type: "yasb.open_meteo.OpenMeteoWidget"
@@ -192,11 +185,7 @@ widgets:
     type: "yasb.grouper.GrouperWidget"
     options:
       class_name: "sysinfo"
-      widgets: [
-        "disk",
-        "memory",
-        "cpu",
-      ]
+      widgets: ["disk", "memory", "cpu"]
       collapse_options:
         enabled: true
         expanded_label: "\udb80\udefc"
@@ -205,28 +194,28 @@ widgets:
   disk:
     type: "yasb.disk.DiskWidget"
     options:
-        label: "<span>\udb80\udeca</span> {space[used][percent]}"
-        label_alt: "<span>\udb80\udeca</span> {space[used][gb]}/{space[total][gb]}"
-        volume_label: "C"
-        update_interval: 60
-        animation:
-          enabled: False
-          duration: 0
-        group_label:
-          volume_labels: ["C", "D", "E", "F"]
-          show_label_name: True
-          blur: False
-          round_corners: False
-          round_corners_type: "small"
-          border_color: "None"
-          alignment: "right"
-          direction: "down"
-          offset_top: 4
-          offset_left: 40
-        callbacks:
-          on_left: "toggle_label"
-          on_middle: "exec explorer"
-          on_right: "toggle_group"
+      label: "<span>\udb80\udeca</span> {space[used][percent]}"
+      label_alt: "<span>\udb80\udeca</span> {space[used][gb]}/{space[total][gb]}"
+      volume_label: "C"
+      update_interval: 60
+      animation:
+        enabled: False
+        duration: 0
+      group_label:
+        volume_labels: ["C", "D", "E", "F"]
+        show_label_name: True
+        blur: False
+        round_corners: False
+        round_corners_type: "small"
+        border_color: "None"
+        alignment: "right"
+        direction: "down"
+        offset_top: 4
+        offset_left: 40
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "exec explorer"
+        on_right: "toggle_group"
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
@@ -274,30 +263,27 @@ widgets:
         duration: 0
       tooltip: False
       gallery:
-          enabled: true
-          blur: false
-          image_width: 250
-          image_per_page: 7
-          gallery_columns: 0 # 0 = auto, matches image_per_page for a single row
-          horizontal_position: "center" # left/center/right placement on screen
-          vertical_position: "center" # top/center/bottom placement
-          position_offset: 0 # minimum gap (px) from screen edges - see below for advanced options
-          respect_work_area: true # clamp to OS work area (avoids Windows taskbar)
-          show_buttons: false
-          orientation: "portrait"
-          image_spacing: 12
-          lazy_load: false
-          lazy_load_fadein: 0
-          image_corner_radius: 0
+        enabled: true
+        blur: false
+        image_width: 250
+        image_per_page: 7
+        gallery_columns: 0 # 0 = auto, matches image_per_page for a single row
+        horizontal_position: "center" # left/center/right placement on screen
+        vertical_position: "center" # top/center/bottom placement
+        position_offset: 0 # minimum gap (px) from screen edges - see below for advanced options
+        respect_work_area: true # clamp to OS work area (avoids Windows taskbar)
+        show_buttons: false
+        orientation: "portrait"
+        image_spacing: 12
+        lazy_load: false
+        lazy_load_fadein: 0
+        image_corner_radius: 0
 
   system-tray:
     type: "yasb.grouper.GrouperWidget"
     options:
       class_name: "system-tray"
-      widgets: [
-        "systray",
-        "lines"
-      ]
+      widgets: ["systray", "lines"]
       collapse_options:
         enabled: true
         expanded_label: "\uf054"
@@ -322,7 +308,7 @@ widgets:
     options:
       offline_label: "Offline"
       hide_if_offline: True
-      monitor_exclusive: False 
+      monitor_exclusive: False
       enable_scroll_switching: False
       animation: False
   glazewm_binding_mode:
@@ -338,10 +324,10 @@ widgets:
         resize: "\udb82\ude68"
         pause: "\uf28c"
       binding_modes_to_cycle_through: [
-        "none", # none handles if no binding mode is active
-        "resize",
-        "pause"
-      ]
+          "none", # none handles if no binding mode is active
+          "resize",
+          "pause",
+        ]
       callbacks:
         on_left: "next_binding_mode"
         on_middle: "do_nothing"
@@ -379,65 +365,66 @@ widgets:
         prev_track: "\udb83\udf28"
         next_track: "\udb83\udf27"
   clock:
-      type: "yasb.clock.ClockWidget"
-      options:
-        label: "{%H:%M}"
-        label_alt: "{%A %d %B %Y %H:%M}"
-        tooltip: False
-        calendar:
-          blur: False
-          round_corners: False
-          alignment: "right"
-          direction: "down"
-          offset_top: 4
-          offset_left: -2
-          border_color: None
-          show_holidays: True
-          holiday_color: "#FF6E00"
-          country_code: "IN"
-          extended: False
-        animation:
-          enabled: False
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%A %H:%M}"
+      label_alt: "{%A %d %B %Y %H:%M}"
+      tooltip: False
+      calendar:
+        blur: False
+        round_corners: False
+        alignment: "right"
+        direction: "down"
+        offset_top: 4
+        offset_left: -2
+        border_color: None
+        show_holidays: True
+        holiday_color: "#FF6E00"
+        country_code: "IN"
+        extended: False
+      animation:
+        enabled: False
   wifi:
-      type: "yasb.wifi.WifiWidget"
-      options:
-        label: "<span>{wifi_icon}</span>"
-        label_alt: "{wifi_name} {wifi_strength}%"
-        update_interval: 1000
-        callbacks:
-          on_left: "exec quick_settings"
-          on_middle: "exec cmd.exe /c start ms-settings:network"
-          on_right: "toggle_label"
-        ethernet_label: "<span>\udb80\ude00</span>"
-        ethernet_label_alt: "<span>{ethernet_name}</span>"
-        wifi_icons: [
-          "\udb82\udd2e",  # 0% strength icon
-          "\uf1eb",  # 1-20% strength
-          "\uf1eb",  # 21-40% strength
-          "\uf1eb",  # 41-80% strength
-          "\uf1eb"   # 81-100% strength
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "<span>{wifi_icon}</span>"
+      label_alt: "{wifi_name} {wifi_strength}%"
+      update_interval: 1000
+      callbacks:
+        on_left: "exec quick_settings"
+        on_middle: "exec cmd.exe /c start ms-settings:network"
+        on_right: "toggle_label"
+      ethernet_label: "<span>\udb80\ude00</span>"
+      ethernet_label_alt: "<span>{ethernet_name}</span>"
+      wifi_icons: [
+          "\udb82\udd2e", # 0% strength icon
+          "\uf1eb", # 1-20% strength
+          "\uf1eb", # 21-40% strength
+          "\uf1eb", # 41-80% strength
+          "\uf1eb", # 81-100% strength
         ]
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
       label: "<span>{icon}</span> {level}"
       tooltip: False
+      scroll_step: 3
       mute_text: ""
       animation:
         enabled: False
         duration: 0
       volume_icons:
-        - "\ue74f"  # Icon for muted
-        - "\ue994"  # Icon for 0-10% volume
-        - "\ue994"  # Icon for 11-30% volume
-        - "\ue994"  # Icon for 31-60% volume
-        - "\ue994"  # Icon for 61-100% volume
+        - "\ue74f" # Icon for muted
+        - "\ue994" # Icon for 0-10% volume
+        - "\ue994" # Icon for 11-30% volume
+        - "\ue994" # Icon for 31-60% volume
+        - "\ue994" # Icon for 61-100% volume
       audio_menu:
         blur: False
         round_corners: False
-        border_color: 'None'
-        alignment: 'right'
-        direction: 'down'
+        border_color: "None"
+        alignment: "right"
+        direction: "down"
         offset_top: 6
         offset_left: 80
       callbacks:
@@ -446,30 +433,30 @@ widgets:
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
-        label: "<span>{icon}</span>{percent}%"
-        label_alt: "Pow {power}W HP {health}%"
-        update_interval: 5000
-        hide_unsupported: True
-        time_remaining_natural: False
-        animation:
-          enabled: False
-          duration: 0
-        charging_options:
-          icon_format: "{charging_icon}"
-          blink_charging_icon: False
-        status_thresholds:
-          critical: 10
-          low: 25
-          medium: 50
-          high: 75
-          full: 100
-        status_icons:
-          icon_charging: "\udb85\udc0c"
-          icon_critical: "\ueba1"
-          icon_low: "\ueba3"
-          icon_medium: "\ueba6"
-          icon_high: "\ueba9"
-          icon_full: "\uebaa"
+      label: "<span>{icon}</span>{percent}%"
+      label_alt: "Pow {power}W HP {health}%"
+      update_interval: 5000
+      hide_unsupported: True
+      time_remaining_natural: False
+      animation:
+        enabled: False
+        duration: 0
+      charging_options:
+        icon_format: "{charging_icon}"
+        blink_charging_icon: False
+      status_thresholds:
+        critical: 10
+        low: 25
+        medium: 50
+        high: 75
+        full: 100
+      status_icons:
+        icon_charging: "\udb85\udc0c"
+        icon_critical: "\ueba1"
+        icon_low: "\ueba3"
+        icon_medium: "\ueba6"
+        icon_high: "\ueba9"
+        icon_full: "\uebaa"
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
@@ -484,7 +471,7 @@ widgets:
       button_row: 3
       buttons:
         lock: ["\uf456", "Lock"]
-        sleep: ["\uf4ee","Sleep"]
+        sleep: ["\uf4ee", "Sleep"]
         signout: ["\uf08b", "Sign out"]
         shutdown: ["\uf011", "Shut Down"]
         restart: ["\uead2", "Restart"]

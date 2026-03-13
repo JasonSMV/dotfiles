@@ -60,12 +60,13 @@ For more information about configuration options, please visit their documentati
 
 /*                                 COMMON YASB ELEMENTS                          */
 * {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text);
-    font-weight: 750;
-    font-family: "JetBrainsMono NFP";
+    font-weight: 610;
+    font-family: "JetBrainsMono Nerd Font";
     margin: 0;
     padding: 0;
+    letter-spacing: 1px;
 }
 .yasb-bar {
     padding: 0 2px;
@@ -74,18 +75,18 @@ For more information about configuration options, please visit their documentati
 }
 
 .widget {
-    padding: 0 3px;
+    padding: 0 5px;
     margin: 0;
 }
 .icon {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
 }
 .widget .label {
     padding: 0px 2px;
 }
 .grouper-button {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
 }
 
