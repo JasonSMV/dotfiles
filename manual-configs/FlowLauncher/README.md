@@ -23,3 +23,6 @@ To apply the theme, navigate to `FlowLauncher` directory where it contains the n
 ![STEP 3](../Images/FL-Step-3.png)
 
 ![STEP 4](../Images/FL-Step-4.png)
+
+Need to also change index search to Everything!
+![STEP 5](../Images/FL-Step-5.png)
