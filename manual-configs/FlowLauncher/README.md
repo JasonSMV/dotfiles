@@ -9,7 +9,8 @@ For an optimal search, make changes to the following plugins
 Recommended Plugins
 
 - AnyVideo Downloader
-- Clipboard+
+- Clipboard+ - Change action to cb
+- Temp Cleaner d
 - Windows Terminal Profiles
 
 To apply the theme, navigate to `FlowLauncher` directory where it contains the necessary steps documented as images.
