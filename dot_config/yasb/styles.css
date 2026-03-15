@@ -71,7 +71,7 @@ For more information about configuration options, please visit their documentati
 .yasb-bar {
     padding: 0 2px;
     margin: 0;
-    background-color: var(--bar_bg);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .widget {
