@@ -1,6 +1,8 @@
 # Guide to make brave better
 https://github.com/libalpm64/Better-Brave-Browser
 
+- Set up shortcut to toggle vertical tabs.  Ctrl + q: Setting > System > Shorcuts
+- Appearance > Theme > Choose: Light, Ultra Dark
 
 # Flags
 
