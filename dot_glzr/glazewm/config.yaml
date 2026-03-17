@@ -255,6 +255,7 @@ window_rules:
     match:
       - window_process: { regex: "ms-teams" }
       - window_process: { regex: "Notion" }
+      - window_process: { regex: "Todoist" }
       - window_title: { regex: "Outlook" }
 
   - commands: ["move --workspace 2", "focus --workspace 2"]

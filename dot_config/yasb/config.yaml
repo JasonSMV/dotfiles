@@ -1,7 +1,7 @@
 # Bar For GlazeWM
 # For more information about configuration options, please visit the Wiki https://github.com/amnweb/yasb/wiki
 watch_stylesheet: True
-watch_config: False
+watch_config: True
 debug: True
 update_check: False
 show_systray: True
@@ -23,7 +23,7 @@ bars:
     blur_effect:
       enabled: False
       acrylic: False
-      dark_mode: False
+      dark_mode: True
       round_corners: False
       border_color: None
     window_flags:
