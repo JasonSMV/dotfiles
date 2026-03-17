@@ -2,6 +2,8 @@
 
 This directory contains my personal GlazeWM configuration for Windows tiling window management.
 
+To view windows list `glazewm query windows`
+
 ## Overview
 
 - **Modifier Key**: `F13` (mapped as the main modifier for all shortcuts)
