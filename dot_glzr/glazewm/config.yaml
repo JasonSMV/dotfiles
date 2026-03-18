@@ -196,7 +196,7 @@ window_rules:
 
         # handle ssms sql server
       - window_process: { equals: "SSMS" }
-        window_title: { not_regex: "Microsoft SQL Server Management Studio" }
+        window_title: { regex: "(Connect)" }
 
       - window_process: { equals: "obs64" }
         window_title: { not_regex: "OBS" }

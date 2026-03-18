@@ -1,4 +1,4 @@
-" ============================================================================
+"" ============================================================================
 " LAZYVIM-STYLE IDEA VIM CONFIG FOR RIDER 
 " ============================================================================
 
@@ -13,11 +13,10 @@ set showmode
 set showcmd
 set visualbell
 set cursorline
-" number of line show a file a context around the cursor when pressing e.g. zz
 set scrolloff=8
 set sidescrolloff=5
 
-" Search while typeing
+" Search while tyhpeing
 set incsearch
 
 " highlight search results
@@ -29,7 +28,8 @@ set ignorecase
 set smartcase
 
 set clipboard^=unnamed,unnamedplus,ideaput
-" History saved in memory
+set clipboard+=unnamed,unnamedplus,ideaput
+
 set history=2000
 set ideajoin
 set ideamarks
@@ -95,35 +95,24 @@ nnoremap <leader>cs :source ~/.ideavimrc<CR>:nohlsearch<CR>
 map w [w
 " move to the end of the next word
 map e ]w
-" move to the beginning of the previous word
+
 map b [b
 " move to the end of the previous word
 map ge ]b
-" Remap control + r for copying text in the command line mode
-cnoremap <C-v> <C-r>+
 
+map <leader>lg <Action>(LazyGit.Open)
 
+" Git
+nmap <leader>gg :action ActivateCommitToolWindow<cr>
+nmap <leader>gb :action Annotate<cr>
+nmap <leader>gl :action Vcs.Show.Log<cr>
 
-" Move half a page down, then center the cursor line on screen
-nnoremap <C-d> <C-d>zz
+" Enable the which-key popup
+set which-key
 
-" Move half a page up, then center the cursor line on screen
-nnoremap <C-u> <C-u>zz
-
-" Jump to the next search result, then center it and open folds if needed
-nnoremap n nzzzv
-
-" Jump to the previous search result, then center it and open folds if needed
-nnoremap N Nzzzv
-
-" Search forward for the word under the cursor, then center the result
-nnoremap * *zzzv
-
-" Search backward for the word under the cursor, then center the result
-nnoremap # #zzzv
-
-
-
+" Disable timeout so the popup stays open
+set notimeout
+nmap <leader>wd :action CloseContent<cr>
 " ============================================================================
 " LSP-LIKE NAVIGATION
 " ============================================================================
@@ -154,7 +143,7 @@ nnoremap gl :action ShowErrorDescription<CR>
 " LazyVim-style: <leader>ff = find file, etc.
 
 " Find file (quick open)
-nnoremap <leader>ff :action GotoFile<CR>
+"nnoremap <leader>ff :action GotoFile<CR>
 " Recent files
 nnoremap <leader>fr :action RecentFiles<CR>
 " Save all
@@ -258,8 +247,8 @@ nnoremap <leader>gb :action Git.Branches<CR>
 " Splits
 nnoremap <leader>ws :action SplitVertically<CR>
 nnoremap <leader>wv :action SplitHorizontally<CR>
-nnoremap <leader>wd :action Unsplit<CR>
-nnoremap <leader>wD :action UnsplitAll<CR>
+"nnoremap <leader>wd :action Unsplit<CR>
+"nnoremap <leader>wD :action UnsplitAll<CR>
 
 " Move focus between splits / tool windows (IDE side)
 nnoremap <C-h> :action MoveFocusToLeft<CR>
@@ -309,3 +298,18 @@ nnoremap ]] :action MethodDown<CR>
 " ============================================================================
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+
+" File search
+nmap <Leader>sf <action>(com.mituuz.fuzzier.search.Fuzzier)
+nmap <Leader>sg <action>(com.mituuz.fuzzier.search.FuzzierVCS)
+
+" Mover
+nmap <Leader>fm <action>(com.mituuz.fuzzier.operation.FuzzyMover)
+
+" Grepping
+nmap <Leader>ss <action>(com.mituuz.fuzzier.grep.FuzzyGrepCI)
+nmap <Leader>sS <action>(com.mituuz.fuzzier.grep.FuzzyGrep)
+nmap <Leader>st <action>(com.mituuz.fuzzier.grep.FuzzyGrepOpenTabsCI)
+nmap <Leader>sT <action>(com.mituuz.fuzzier.grep.FuzzyGrepOpenTabs)
+nmap <Leader>sb <action>(com.mituuz.fuzzier.grep.FuzzyGrepCurrentBufferCI)
+nmap <Leader>sB <action>(com.mituuz.fuzzier.grep.FuzzyGrepCurrentBuffer)
