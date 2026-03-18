@@ -1,0 +1,311 @@
+" ============================================================================
+" LAZYVIM-STYLE IDEA VIM CONFIG FOR RIDER 
+" ============================================================================
+
+" ------------------------------
+" Base
+" ------------------------------
+let mapleader = " "
+
+set number
+set relativenumber
+set showmode
+set showcmd
+set visualbell
+set cursorline
+" number of line show a file a context around the cursor when pressing e.g. zz
+set scrolloff=8
+set sidescrolloff=5
+
+" Search while typeing
+set incsearch
+
+" highlight search results
+set hlsearch
+" remove search highlights when pressing Esc
+nnoremap <Esc> :nohlsearch<CR>
+
+set ignorecase
+set smartcase
+
+set clipboard^=unnamed,unnamedplus,ideaput
+" History saved in memory
+set history=2000
+set ideajoin
+set ideamarks
+set ideastatusicon=gray
+
+" cursor
+set guicursor=n-v-c:hor100,i-ci-ve:ver30,r-cr:hor20,o:hor50
+
+" ------------------------------
+" Plugins (built into IdeaVim)
+" ------------------------------
+set surround
+set commentary
+set easymotion
+set highlightedyank
+set multiple-cursors
+set argtextobj
+set textobj-indent
+set textobj-entire
+set exchange
+set ReplaceWithRegister
+set notimeout
+" see https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+set NERDTree
+
+let g:NERDTreeMapActivateNode = 'l'
+let g:NERDTreeMapJumpParent = 'h'
+let g:NERDTreeMapCloseDir = 'x'
+
+" File explorer 
+" Toggle NERDTree (like <leader>e in LazyVim)
+nnoremap <leader>e  :NERDTreeToggle<CR>
+" Find current file in tree (like LazyVim's find in explorer)
+nnoremap <leader>fe :NERDTreeFind<CR>
+" Focus on NERDTree window
+nnoremap <leader>E  :NERDTreeFocus<CR>
+" ------------------------------
+" Basic Vim QoL
+" ------------------------------
+inoremap jk <Esc>
+nnoremap Y y$
+nnoremap Q gq
+nnoremap <Esc><Esc> :noh<CR>
+" Change redo from cntrl + r to U (more accessible)
+nnoremap U <C-r>
+" Don't override the default register when pasting in visual mode
+vnoremap p "_dP
+" Don't override the default register when pasting in normal mode, need to prefix comand with \.
+nnoremap \ "_
+" Paste without without overiding the default register.
+nnoremap p P
+" jump between angle brackets
+set matchpairs+=<:>
+
+" Open config
+nnoremap <leader>cc :e ~/.ideavimrc<CR>
+" Source config
+nnoremap <leader>cs :source ~/.ideavimrc<CR>:nohlsearch<CR>
+
+" Consider camelCase and snake_case words when jumping between words
+
+" move to the beginning of the next word
+map w [w
+" move to the end of the next word
+map e ]w
+" move to the beginning of the previous word
+map b [b
+" move to the end of the previous word
+map ge ]b
+" Remap control + r for copying text in the command line mode
+cnoremap <C-v> <C-r>+
+
+
+
+" Move half a page down, then center the cursor line on screen
+nnoremap <C-d> <C-d>zz
+
+" Move half a page up, then center the cursor line on screen
+nnoremap <C-u> <C-u>zz
+
+" Jump to the next search result, then center it and open folds if needed
+nnoremap n nzzzv
+
+" Jump to the previous search result, then center it and open folds if needed
+nnoremap N Nzzzv
+
+" Search forward for the word under the cursor, then center the result
+nnoremap * *zzzv
+
+" Search backward for the word under the cursor, then center the result
+nnoremap # #zzzv
+
+
+
+" ============================================================================
+" LSP-LIKE NAVIGATION
+" ============================================================================
+" Go to definition / type / implementation / references
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gD :action GotoTypeDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gr :action FindUsages<CR>
+nnoremap gR :action ShowUsages<CR>
+nnoremap K  :action QuickJavaDoc<CR>
+
+" Jump between methods
+nnoremap gj :action MethodDown<CR>
+nnoremap gk :action MethodUp<CR>
+
+" Jump history
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+
+" Diagnostics
+nnoremap [d :action GotoPreviousError<CR>
+nnoremap ]d :action GotoNextError<CR>
+nnoremap gl :action ShowErrorDescription<CR>
+
+" ============================================================================
+" FILES / PROJECT  (<leader>f, <leader>e)
+" ============================================================================
+" LazyVim-style: <leader>ff = find file, etc.
+
+" Find file (quick open)
+nnoremap <leader>ff :action GotoFile<CR>
+" Recent files
+nnoremap <leader>fr :action RecentFiles<CR>
+" Save all
+nnoremap <leader>fs :action SaveAll<CR>
+
+" Solution Explorer / Project tool window
+" (Equivalent to Alt+1 – opens/focuses Solution Explorer)
+"nnoremap <leader>e  :action ActivateProjectToolWindow<CR>
+
+" ============================================================================
+" SEARCH  (<leader>s)
+" ============================================================================
+" Global search (like Telescope live_grep)
+nnoremap <leader>sg :action FindInPath<CR>
+" File structure (symbols in current file)
+nnoremap <leader>ss :action FileStructurePopup<CR>
+" Search everywhere
+nnoremap <leader>sa :action SearchEverywhere<CR>
+" Go to class
+nnoremap <leader>sc :action GotoClass<CR>
+" Go to symbol
+nnoremap <leader>sm :action GotoSymbol<CR>
+
+" ============================================================================
+" CODE / REFACTOR  (<leader>c)
+" ============================================================================
+" Rename
+nnoremap <leader>cr :action RenameElement<CR>
+" Code actions / quick fixes
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+" Format document
+nnoremap <leader>cf :action ReformatCode<CR>
+" Optimize usings
+nnoremap <leader>co :action OptimizeImports<CR>
+
+" Common refactors
+nnoremap <leader>ce :action ExtractMethod<CR>
+nnoremap <leader>cv :action IntroduceVariable<CR>
+nnoremap <leader>cp :action IntroduceParameter<CR>
+" TODO - Duplicated keybind. 
+"nnoremap <leader>cc :action ChangeSignature<CR>
+
+" Generate / implement / override members
+nnoremap <leader>cg :action Generate<CR>
+nnoremap <leader>ci :action ImplementMethods<CR>
+nnoremap <leader>cO :action OverrideMethods<CR>
+
+" ============================================================================
+" BUILD / RUN / DEBUG  (<leader>b, <leader>r, <leader>d)
+" ============================================================================
+" Build solution
+nnoremap <leader>b  :action BuildSolutionAction<CR>
+nnoremap <leader>rb :action RebuildSolutionAction<CR>
+
+" Run / Debug current configuration
+nnoremap <leader>rr :action Run<CR>
+nnoremap <leader>rd :action Debug<CR>
+nnoremap <leader>rs :action Stop<CR>
+
+" Debug controls
+nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+nnoremap <leader>dc :action Resume<CR>
+nnoremap <leader>di :action StepInto<CR>
+nnoremap <leader>do :action StepOver<CR>
+nnoremap <leader>dO :action StepOut<CR>
+nnoremap <leader>dr :action Rerun<CR>
+nnoremap <leader>de :action ViewBreakpoints<CR>
+
+" ============================================================================
+" TESTS  (<leader>t)
+" ============================================================================
+" NOTE: These actions can vary by Rider version.
+" Use :actionlist test in Rider to find the exact IDs if needed.
+
+" Run tests for current context (method/class)
+" nnoremap <leader>tt :action UnitTestSession.RunContext<CR>
+" Debug tests for current context
+" nnoremap <leader>tT :action UnitTestSession.DebugContext<CR>
+" Rerun last test session
+" nnoremap <leader>tr :action UnitTestSession.Rerun<CR>
+
+" (Uncomment and correct action IDs after checking with :actionlist)
+
+" ============================================================================
+" GIT / VCS  (<leader>g)
+" ============================================================================
+" VCS operations popup
+nnoremap <leader>gg :action ShowVcsOperationsPopup<CR>
+" Git log / history
+nnoremap <leader>gl :action Vcs.Show.Log<CR>
+" Annotate (blame)
+nnoremap <leader>ga :action Annotate<CR>
+" Commit
+nnoremap <leader>gc :action CheckinProject<CR>
+" Branches
+nnoremap <leader>gb :action Git.Branches<CR>
+
+" ============================================================================
+" WINDOWS / LAYOUT  (<leader>w, <leader>z)
+" ============================================================================
+" Splits
+nnoremap <leader>ws :action SplitVertically<CR>
+nnoremap <leader>wv :action SplitHorizontally<CR>
+nnoremap <leader>wd :action Unsplit<CR>
+nnoremap <leader>wD :action UnsplitAll<CR>
+
+" Move focus between splits / tool windows (IDE side)
+nnoremap <C-h> :action MoveFocusToLeft<CR>
+nnoremap <C-j> :action MoveFocusToDown<CR>
+nnoremap <C-k> :action MoveFocusToUp<CR>
+nnoremap <C-l> :action MoveFocusToRight<CR>
+
+" Hide all tool windows (similar to Shift+Esc)
+" If this ID differs, find it via :actionlist Hide
+nnoremap <leader>wh :action HideAllToolWindows<CR>
+
+" Zen / distraction-free / fullscreen
+nnoremap <leader>zz :action ToggleZenMode<CR>
+nnoremap <leader>zD :action ToggleDistractionFreeMode<CR>
+nnoremap <leader>zf :action ToggleFullScreen<CR>
+
+nnoremap <leader>fbt :action ToggleBookmark<CR>
+
+" TABS / BUFFERS
+" ============================================================================
+" Next / previous tab
+nnoremap <Tab>   :action NextTab<CR>
+nnoremap <S-Tab> :action PreviousTab<CR>
+" Close current tab
+nnoremap <leader>x :action CloseContent<CR>
+
+" ============================================================================
+" COMMENTS
+" ============================================================================
+nmap gc  <Plug>Commentary
+vmap gc  <Plug>Commentary
+nmap gcc <Plug>CommentaryLine
+
+" ============================================================================
+" VISUAL MODE IMPROVEMENTS
+" ============================================================================
+" Keep selection when indenting
+vnoremap < <gv
+vnoremap > >gv
+
+" Jump between methods with [[ and ]]
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+
+" ============================================================================
+" SAVE / QUIT
+" ============================================================================
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
