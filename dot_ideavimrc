@@ -113,6 +113,26 @@ set which-key
 " Disable timeout so the popup stays open
 set notimeout
 nmap <leader>wd :action CloseContent<cr>
+
+" Remap control + r for copying text in the command line mode
+cnoremap <C-v> <C-r>+
+
+" Move half a page down, then center the cursor line on screen
+nnoremap <C-d> <C-d>zz
+" Move half a page up, then center the cursor line on screen
+nnoremap <C-u> <C-u>zz
+
+" Jump to the next search result, then center it and open folds if needed
+nnoremap n nzzzv
+" Jump to the previous search result, then center it and open folds if needed
+nnoremap N Nzzzv
+
+" Search forward for the word under the cursor, then center the result
+nnoremap * *zzzv
+" Search backward for the word under the cursor, then center the result
+nnoremap # #zzzv
+
+
 " ============================================================================
 " LSP-LIKE NAVIGATION
 " ============================================================================
