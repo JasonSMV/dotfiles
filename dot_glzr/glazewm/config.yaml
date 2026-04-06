@@ -188,15 +188,19 @@ window_rules:
             regex: "(Rename|Find and Replace|Search|Attach|Find|Debugger|Replace)",
           }
       # Float rider popups
-      - window_process: { equals: "rider64" }
+      - window_process: { regex: "rider64|idea64|webstorm64|datagrip64" }
         window_title:
           {
-            regex: "(Search|Find|Attach|Debugger|Run/Debug|Replace|Rename|dotPeek64|Checkout|Conflicts|Merge|Commit|Create|Rollback)",
+            regex: "(Search|Find|Attach|Debugger|Run/Debug|Replace|Rename|dotPeek64|Checkout|Conflicts|Merge|Commit|Create|Rollback|Welcome|Updates)",
           }
+
+      # Jetbrains dotPeek
+      - window_process: { equals: "dotPeek63" }
+        window_title: { not_regex: "JetBrains" }
 
         # handle ssms sql server
       - window_process: { equals: "SSMS" }
-        window_title: { regex: "(Connect)" }
+        window_title: { regex: "(Connect|Filter)" }
 
       - window_process: { equals: "obs64" }
         window_title: { not_regex: "OBS" }
@@ -228,10 +232,6 @@ window_rules:
         window_title: { equals: "Find and Replace" }
       - window_process: { equals: "devenv" } # Float the VS Search
         window_title: { equals: "Search" }
-
-      # Jetbrains dotPeek
-      - window_process: { equals: "dotPeek64" }
-        window_title: { not_regex: "JetBrains" }
 
       # System Apps
       - window_title: { equals: "Task Manager" }
