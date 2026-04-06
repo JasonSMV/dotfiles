@@ -24,7 +24,9 @@ set hlsearch
 " remove search highlights when pressing Esc
 nnoremap <Esc> :nohlsearch<CR>
 
+" make the search case insensitive
 set ignorecase
+" Enable case-senstive search when an uppercase letter is present 
 set smartcase
 
 set clipboard^=unnamed,unnamedplus,ideaput
@@ -100,6 +102,18 @@ map b [b
 " move to the end of the previous word
 map ge ]b
 
+"" Choosing handlers in conflicting IDE/IdeaVim keymaps =======
+sethandler <c-i> n-v-i:vim
+sethandler <c-o> n-v-i:vim
+sethandler <c-d> n-v-i:vim
+sethandler <c-u> n-v-i:vim
+sethandler <c-h> n-v-i:vim
+sethandler <c-j> n-v-i:vim
+sethandler <c-k> n-v-i:vim
+sethandler <c-l> n-v-i:vim
+sethandler <c-a-d> n-v-i:vim
+sethandler <c-r> n-v-i:vim
+
 map <leader>lg <Action>(LazyGit.Open)
 
 " Git
@@ -132,7 +146,21 @@ nnoremap * *zzzv
 " Search backward for the word under the cursor, then center the result
 nnoremap # #zzzv
 
+" Breakpoints && bookmarks {{{
+nnoremap <Leader>bt     :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>bv     :action ViewBreakpoints<CR>
 
+nnoremap <leader>BB     :action ToggleBookmark<cr>
+nnoremap <leader>BV 	:action ShowBookmarks<cr>
+nnoremap <leader>BT 	:action ToggleBookmarkWithMnemonic<cr>
+"}}}
+
+" Find && usage actions {{{
+nnoremap <space>u   	:action FindUsages<cr>
+nnoremap <space>U   	:action ShowUsages<cr>
+nnoremap <space><a-f>  	:action FindUsagesInFile<cr>
+nnoremap <space>h   	:action HighlightUsagesInFile<cr>
+"}}}
 " ============================================================================
 " LSP-LIKE NAVIGATION
 " ============================================================================
@@ -224,13 +252,13 @@ nnoremap <leader>rd :action Debug<CR>
 nnoremap <leader>rs :action Stop<CR>
 
 " Debug controls
-nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+" nnoremap <leader>db :action ToggleLineBreakpoint<CR>
+" nnoremap <leader>de :action ViewBreakpoints<CR>
 nnoremap <leader>dc :action Resume<CR>
 nnoremap <leader>di :action StepInto<CR>
 nnoremap <leader>do :action StepOver<CR>
 nnoremap <leader>dO :action StepOut<CR>
 nnoremap <leader>dr :action Rerun<CR>
-nnoremap <leader>de :action ViewBreakpoints<CR>
 
 " ============================================================================
 " TESTS  (<leader>t)
