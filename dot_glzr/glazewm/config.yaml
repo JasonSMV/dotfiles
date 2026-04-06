@@ -138,11 +138,8 @@ workspaces:
     bind_to_monitor: 1
     keep_alive: true
   - name: "6"
-    bind_to_monitor: 1
   - name: "7"
-    bind_to_monitor: 1
   - name: "8"
-    bind_to_monitor: 1
   - name: "9"
     bind_to_monitor: 0
 
@@ -264,7 +261,7 @@ window_rules:
 
   - commands: ["move --workspace 3", "focus --workspace 3"]
     match:
-      - window_process: { regex: "rider64|devenv|Cursor" }
+      - window_process: { regex: "devenv|Cursor" }
 
   - commands: ["move --workspace 4", "focus --workspace 4"]
     match:
