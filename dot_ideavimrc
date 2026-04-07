@@ -191,11 +191,23 @@ nnoremap gl :action ShowErrorDescription<CR>
 " LazyVim-style: <leader>ff = find file, etc.
 
 " Find file (quick open)
-"nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>ff :action SearchEverywhere<CR>
 " Recent files
 nnoremap <leader>fr :action RecentFiles<CR>
-" Save all
-nnoremap <leader>fs :action SaveAll<CR>
+
+map <leader>fp :action ManageRecentProjects<cr>
+map <leader>fc :action GotoClass<cr>
+map <leader>fn :action GotoFile<cr>
+map <leader>fa :action GotoAction<cr>
+map <leader>fg :action FindInPath<cr>
+map <leader>fl :action RecentLocations<cr>
+map <leader>fm :action ShowBookmarks<cr>
+map <leader>fs :action GotoSymbol<cr>
+map <leader>fd :action Find<cr>
+map <leader>fr :action Replace<cr>
+map <leader>fR :action ReplaceInPath<cr>
+map <leader>fx :action PasteMultiple<cr>
+map <leader>fk :action ViewBreakpoints<cr>
 
 " Solution Explorer / Project tool window
 " (Equivalent to Alt+1 – opens/focuses Solution Explorer)
@@ -352,7 +364,7 @@ nmap <Leader>sf <action>(com.mituuz.fuzzier.search.Fuzzier)
 nmap <Leader>sg <action>(com.mituuz.fuzzier.search.FuzzierVCS)
 
 " Mover
-nmap <Leader>fm <action>(com.mituuz.fuzzier.operation.FuzzyMover)
+"nmap <Leader>fm <action>(com.mituuz.fuzzier.operation.FuzzyMover)
 
 " Grepping
 nmap <Leader>ss <action>(com.mituuz.fuzzier.grep.FuzzyGrepCI)
