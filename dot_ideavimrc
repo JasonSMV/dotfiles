@@ -156,12 +156,12 @@ nnoremap * *zzzv
 nnoremap # #zzzv
 
 " Breakpoints && bookmarks {{{
-nnoremap <Leader>bt     :action ToggleLineBreakpoint<CR>
-nnoremap <Leader>bv     :action ViewBreakpoints<CR>
-
-nnoremap <leader>BB     :action ToggleBookmark<cr>
-nnoremap <leader>BV 	:action ShowBookmarks<cr>
-nnoremap <leader>BT 	:action ToggleBookmarkWithMnemonic<cr>
+" nnoremap <Leader>bt     :action ToggleLineBreakpoint<CR>
+" nnoremap <Leader>bv     :action ViewBreakpoints<CR>
+" 
+" nnoremap <leader>BB     :action ToggleBookmark<cr>
+" nnoremap <leader>BV 	:action ShowBookmarks<cr>
+" nnoremap <leader>BT 	:action ToggleBookmarkWithMnemonic<cr>
 "}}}
 
 " Find && usage actions {{{
@@ -213,8 +213,6 @@ map <leader>fl :action RecentLocations<cr>
 map <leader>fm :action ShowBookmarks<cr>
 map <leader>fs :action GotoSymbol<cr>
 map <leader>fd :action Find<cr>
-map <leader>fr :action Replace<cr>
-map <leader>fR :action ReplaceInPath<cr>
 map <leader>fx :action PasteMultiple<cr>
 map <leader>fk :action ViewBreakpoints<cr>
 

@@ -188,7 +188,7 @@ window_rules:
       - window_process: { regex: "rider64|idea64|webstorm64|datagrip64" }
         window_title:
           {
-            regex: "(Search|Find|Attach|Debugger|Run/Debug|Replace|Rename|dotPeek64|Checkout|Conflicts|Merge|Commit|Create|Rollback|Welcome|Updates)",
+            regex: "(Search|Find|Attach|Debugger|Run/Debug|Replace|Rename|dotPeek64|Checkout|Conflicts|Merge|Commit|Create|Rollback|Welcome|Updates|Breakpoint)",
           }
 
       # Jetbrains dotPeek
