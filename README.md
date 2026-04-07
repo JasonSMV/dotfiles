@@ -53,14 +53,6 @@ git commit -m "Update dotfiles"
 git push
 ```
 
-### Removing Configs
-
-To remove a config from chezmoi, delete the directory from the source state:
-```bash
-# Example: removed BraveSoftware/Brave-Browser
-rm -rf dot_config/BraveSoftware
-```
-
 ## Cross-Platform Configuration
 
 This dotfiles repository supports both **Windows** and **Linux** using chezmoi's template system.

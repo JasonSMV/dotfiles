@@ -68,6 +68,17 @@ nnoremap <leader>e  :NERDTreeToggle<CR>
 nnoremap <leader>fe :NERDTreeFind<CR>
 " Focus on NERDTree window
 nnoremap <leader>E  :NERDTreeFocus<CR>
+
+" Enable the which-key popup
+set which-key
+
+" Which-key settings
+set which-key
+let g:WhichKey_FontSize = 16
+let g:WhichKey_CommandColor = "#41ead4"
+let g:WhichKey_PrefixColor = "#f335b2"
+let g:WhichKey_SortOrder = "by_key_prefix_first"
+let g:WhichKey_ShowTypedSequence = "true"
 " ------------------------------
 " Basic Vim QoL
 " ------------------------------
@@ -121,8 +132,6 @@ nmap <leader>gg :action ActivateCommitToolWindow<cr>
 nmap <leader>gb :action Annotate<cr>
 nmap <leader>gl :action Vcs.Show.Log<cr>
 
-" Enable the which-key popup
-set which-key
 
 " Disable timeout so the popup stays open
 set notimeout
@@ -168,9 +177,9 @@ nnoremap <space>h   	:action HighlightUsagesInFile<cr>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gD :action GotoTypeDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gr :action FindUsages<CR>
-nnoremap gR :action ShowUsages<CR>
-nnoremap K  :action QuickJavaDoc<CR>
+nnoremap gu :action FindUsages<CR>
+nnoremap gU :action ShowUsages<CR>
+nnoremap gt :action GotoTest<Cr>
 
 " Jump between methods
 nnoremap gj :action MethodDown<CR>
@@ -212,20 +221,6 @@ map <leader>fk :action ViewBreakpoints<cr>
 " Solution Explorer / Project tool window
 " (Equivalent to Alt+1 – opens/focuses Solution Explorer)
 "nnoremap <leader>e  :action ActivateProjectToolWindow<CR>
-
-" ============================================================================
-" SEARCH  (<leader>s)
-" ============================================================================
-" Global search (like Telescope live_grep)
-nnoremap <leader>sg :action FindInPath<CR>
-" File structure (symbols in current file)
-nnoremap <leader>ss :action FileStructurePopup<CR>
-" Search everywhere
-nnoremap <leader>sa :action SearchEverywhere<CR>
-" Go to class
-nnoremap <leader>sc :action GotoClass<CR>
-" Go to symbol
-nnoremap <leader>sm :action GotoSymbol<CR>
 
 " ============================================================================
 " CODE / REFACTOR  (<leader>c)
