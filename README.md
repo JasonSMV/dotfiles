@@ -22,37 +22,6 @@ chezmoi apply
 
 ---
 
-## What is tracked
-
-| Config | Windows Path |
-|--------|-------------|
-| Git config | `~\.gitconfig` |
-| Git shared config | `~\.config\git\` |
-| PowerShell profile | `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` |
-| Windows Terminal | `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json` |
-| VS Code settings | `%APPDATA%\Code\User\settings.json` |
-| Claude Code config | `~\.claude\CLAUDE.md`, `settings.json`, `RTK.md` |
-| OpenCode config (global) | `%APPDATA%\opencode\opencode.json`, `AGENTS.md`, `commands\`, `plugins\` |
-| OpenCode config (user) | `~\.config\opencode\opencode.json`, `settings.json`, `agents\`, `plugins\`, `profiles\` |
-| Komorebi (Windows WM) | `~\komorebi.json`, `komorebi.bar.json`, `komorebi.bar.monitor2.json` |
-| GlazeWM | `~\.glzr\glazewm\config.yaml` |
-| YASB (status bar) | `~\.config\yasb\` |
-| fastfetch | `~\.config\fastfetch\` |
-| mpv | `~\.config\mpv\` |
-| IdeaVim | `~\.ideavimrc` |
-
-## What is NOT tracked (intentionally)
-
-| File | Reason |
-|------|--------|
-| `~\.npmrc` | Contains Azure DevOps PAT token — manage separately |
-| `~\.claude\.credentials.json` | API keys |
-| `~\.claude\projects\` | Session data |
-| `~\.config\opencode\antigravity-accounts.json` | Auth tokens |
-| `~\.config\opencode\node_modules\` | Install artifact |
-
----
-
 ## Daily Usage
 
 ```powershell
