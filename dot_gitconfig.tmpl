@@ -1,7 +1,13 @@
 {{- $email := "jeison.martinez@trip-arc.com" -}}
 [user]
-	name = Jeison Martinez
+	name = Jeison Martinez (TMT)
 	email = {{ $email }}
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 
 [commit]
     template = ~/.config/git/template.txt

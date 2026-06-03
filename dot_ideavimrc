@@ -177,7 +177,7 @@ nnoremap <space>h   	:action HighlightUsagesInFile<cr>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gD :action GotoTypeDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gu :action FindUsages<CR>
+"nnoremap gu :action FindUsages<CR>
 nnoremap gU :action ShowUsages<CR>
 nnoremap gt :action GotoTest<Cr>
 
