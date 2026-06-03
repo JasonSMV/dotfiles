@@ -24,6 +24,10 @@ dot_claude/shell-snapshots/**
 dot_claude/telemetry/**
 dot_claude/plugins/**
 
+# packages/ — reference only, not deployed to home dir
+packages
+packages/**
+
 # .npmrc — contains Azure DevOps PAT token
 dot_npmrc
 
