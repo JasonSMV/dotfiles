@@ -1,0 +1,480 @@
+{
+  "export_version": 3,
+  "packages": [
+    {
+      "Id": "AltSnap.AltSnap",
+      "Name": "AltSnap",
+      "Version": "1.67",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "AmN.yasb",
+      "Name": "yasb",
+      "Version": "2.0.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Anki.Anki",
+      "Name": "Anki",
+      "Version": "25.09",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Anysphere.Cursor",
+      "Name": "Cursor",
+      "Version": "3.4.20",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "AutoHotkey.AutoHotkey",
+      "Name": "AutoHotkey",
+      "Version": "2.0.26",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Bitwarden.Bitwarden",
+      "Name": "Bitwarden",
+      "Version": "2026.3.1",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Brave.Brave",
+      "Name": "Brave",
+      "Version": "148.1.90.128",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "ChidiWilliams.Buzz",
+      "Name": "Buzz",
+      "Version": "1.4.4",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Cloudflare.Warp",
+      "Name": "Cloudflare One Client",
+      "Version": "26.3.851.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "CoreyButler.NVMforWindows",
+      "Name": "NVM for Windows",
+      "Version": "1.2.2",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "DEVCOM.JetBrainsMonoNerdFont",
+      "Name": "JetBrainsMono Nerd Font",
+      "Version": "3.3.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Docker.DockerDesktop",
+      "Name": "Docker Desktop",
+      "Version": "4.76.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Doist.Todoist",
+      "Name": "Todoist",
+      "Version": "9.27.1",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Fastfetch-cli.Fastfetch",
+      "Name": "fastfetch",
+      "Version": "2.62.1",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Flow-Launcher.Flow-Launcher",
+      "Name": "Flow Launcher",
+      "Version": "2.1.1",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "GitButler.GitButler",
+      "Name": "GitButler",
+      "Version": "0.15.2",
+      "Source": "winget",
+      "ManagerName": "winget",
+      "Updates": {
+        "IgnoredVersion": "0.15.2"
+      }
+    },
+    {
+      "Id": "GitExtensionsTeam.GitExtensions",
+      "Name": "Git Extensions",
+      "Version": "6.0.5.18375",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Google.Chrome.EXE",
+      "Name": "Google Chrome (EXE)",
+      "Version": "148.0.7778.218",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Google.ChromeRemoteDesktopHost",
+      "Name": "Chrome Remote Desktop Host",
+      "Version": "149.0.7827.18",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "JesseDuffield.lazygit",
+      "Name": "lazygit",
+      "Version": "0.61.1",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "JetBrains.DataGrip",
+      "Name": "DataGrip",
+      "Version": "2026.1.3",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "JetBrains.Rider",
+      "Name": "JetBrains Rider",
+      "Version": "\u003E 2026.1.2",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "JetBrains.Toolbox",
+      "Name": "JetBrains Toolbox",
+      "Version": "3.4.3.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.AspNetCore.5",
+      "Name": "Microsoft ASP.NET Core Runtime 5.0",
+      "Version": "5.0.17",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.DesktopRuntime.10",
+      "Name": "Microsoft .NET Windows Desktop Runtime 10.0",
+      "Version": "10.0.8",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.DesktopRuntime.3_1",
+      "Name": "Microsoft .NET Windows Desktop Runtime 3.1",
+      "Version": "3.1.32",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.DesktopRuntime.5",
+      "Name": "Microsoft .NET Windows Desktop Runtime 5.0",
+      "Version": "5.0.17",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.DesktopRuntime.6",
+      "Name": "Microsoft .NET Windows Desktop Runtime 6.0",
+      "Version": "6.0.36",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.DesktopRuntime.7",
+      "Name": "Microsoft .NET Windows Desktop Runtime 7.0",
+      "Version": "7.0.20",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.DesktopRuntime.8",
+      "Name": "Microsoft .NET Windows Desktop Runtime 8.0",
+      "Version": "8.0.27",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.DesktopRuntime.9",
+      "Name": "Microsoft .NET Windows Desktop Runtime 9.0",
+      "Version": "9.0.16",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.Framework.DeveloperPack.4.6",
+      "Name": "Microsoft .NET Framework 4.6.2 Developer Pack",
+      "Version": "\u003E 4.6.2",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.DotNet.Native.Runtime",
+      "Name": "Microsoft .NET Native Runtime",
+      "Version": "2.2.28604.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.PowerToys",
+      "Name": "PowerToys",
+      "Version": "0.99.1",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.VisualStudio.Community",
+      "Name": "Visual Studio Community 2026",
+      "Version": "18.5.2",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.VisualStudioCode",
+      "Name": "Microsoft Visual Studio Code",
+      "Version": "1.122.1",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.WSL",
+      "Name": "Windows Subsystem for Linux",
+      "Version": "2.7.3.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Microsoft.WindowsApp",
+      "Name": "Windows App",
+      "Version": "2.0.1129.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "MongoDB.Compass.Full",
+      "Name": "MongoDB Compass",
+      "Version": "1.49.8",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Nilesoft.Shell",
+      "Name": "Nilesoft Shell",
+      "Version": "1.9.18",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "Notion.Notion",
+      "Name": "Notion",
+      "Version": "7.14.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "OBSProject.OBSStudio",
+      "Name": "OBS Studio",
+      "Version": "31.1.2",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "RamenSoftware.Windhawk",
+      "Name": "Windhawk",
+      "Version": "1.7.3",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "SST.opencode",
+      "Name": "opencode",
+      "Version": "1.14.46",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "ShareX.ShareX",
+      "Name": "ShareX",
+      "Version": "20.2.0",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "T3Tools.T3Code",
+      "Name": "T3 Code",
+      "Version": "0.0.23",
+      "Source": "winget",
+      "ManagerName": "winget"
+    },
+    {
+      "Id": "azure-cli",
+      "Name": "Azure Cli",
+      "Version": "2.86.0",
+      "Source": "community",
+      "ManagerName": "chocolatey"
+    },
+    {
+      "Id": "cargo-binstall",
+      "Name": "Cargo Binstall",
+      "Version": "1.19.1",
+      "Source": "crates.io",
+      "ManagerName": "cargo"
+    },
+    {
+      "Id": "cargo-update",
+      "Name": "Cargo Update",
+      "Version": "20.0.0",
+      "Source": "crates.io",
+      "ManagerName": "cargo"
+    },
+    {
+      "Id": "chocolatey",
+      "Name": "Chocolatey",
+      "Version": "2.5.0",
+      "Source": "community",
+      "ManagerName": "chocolatey"
+    },
+    {
+      "Id": "cjpais.Handy",
+      "Name": "Handy",
+      "Version": "0.8.3",
+      "Source": "winget",
+      "ManagerName": "winget",
+      "Updates": {
+        "IgnoredVersion": "0.7.9"
+      }
+    },
+    {
+      "Id": "curl",
+      "Name": "Curl",
+      "Version": "8.19.0_3",
+      "Source": "main",
+      "ManagerName": "scoop"
+    },
+    {
+      "Id": "fzf",
+      "Name": "Fzf",
+      "Version": "0.59.0",
+      "Source": "community",
+      "ManagerName": "chocolatey"
+    },
+    {
+      "Id": "glzr-io.glazewm",
+      "Name": "GlazeWM",
+      "Version": "3.10.1",
+      "Source": "winget",
+      "ManagerName": "winget",
+      "InstallationOptions": {
+        "OverridesNextLevelOpts": true
+      }
+    },
+    {
+      "Id": "valinet.ExplorerPatcher",
+      "Name": "ExplorerPatcher",
+      "Version": "26100.4946.69.6",
+      "Source": "winget",
+      "ManagerName": "winget"
+    }
+  ],
+  "incompatible_packages_info": "Incompatible packages cannot be installed from UniGetUI, either because they came from a local source (for example Local PC) or because the package manager was unavailable. Nevertheless, they have been listed here for logging purposes.",
+  "incompatible_packages": [
+    {
+      "Id": "07ad40408a2e051c36b5c74b137c2f9a",
+      "Name": "Chrome Remote Desktop",
+      "Version": "1.0",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "Cisco Secure Client - AnyConnect VPN",
+      "Name": "Cisco Secure Client - AnyConnect VPN ",
+      "Version": "5.1.6.103",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "DevToys Preview_is1",
+      "Name": "DevToys Preview version 2.0-preview.9",
+      "Version": "2.0-preview.9",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "Everything",
+      "Name": "Everything 1.4.1.1009 (x64)",
+      "Version": "1.4.1.1009",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "Git_is1",
+      "Name": "Git",
+      "Version": "2.53.0.2",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "Microsoft.NET.Native.Framework.2.2_2.2.29512.0_x64__8wekyb3d8bbwe",
+      "Name": "Microsoft .Net Native Framework Package 2.2",
+      "Version": "2.2.29512.0",
+      "Source": "Microsoft Store"
+    },
+    {
+      "Id": "Microsoft.NET.Native.Framework.2.2_2.2.29512.0_x86__8wekyb3d8bbwe",
+      "Name": "Microsoft .Net Native Framework Package 2.2",
+      "Version": "2.2.29512.0",
+      "Source": "Microsoft Store"
+    },
+    {
+      "Id": "NotepadPlusPlus_1.0.0.0_neutral__2247w0b46hfww",
+      "Name": "Notepad\u002B\u002B",
+      "Version": "1.0.0.0",
+      "Source": "Microsoft Store"
+    },
+    {
+      "Id": "Postman",
+      "Name": "Postman x64 12.13.4",
+      "Version": "12.13.4",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "db23b2b3",
+      "Name": "SQL Server Management Studio 21",
+      "Version": "21.6.17",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "{2DD0BF2E-CBA3-4A4F-A521-2B87531A255A}",
+      "Name": "Microsoft .NET SDK 9.0.313 (x64) from Visual Studio",
+      "Version": "9.3.1326.17603",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "{554D00E3-B865-44E0-B32C-589C592E92BB}",
+      "Name": "JetBrains ETW Host Service (x64)",
+      "Version": "16.44.0",
+      "Source": "Local PC"
+    },
+    {
+      "Id": "{636BAFAD-FFF4-46F6-8D31-005333DEBC65}",
+      "Name": "Microsoft .NET SDK 10.0.203 (x64) from Visual Studio",
+      "Version": "40.11.50261",
+      "Source": "Local PC"
+    }
+  ]
+}
