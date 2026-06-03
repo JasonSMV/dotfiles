@@ -2,115 +2,100 @@
 
 My dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
-## Quick Start
+## Quick Start — New Windows Machine
 
-On a new machine:
+### Prerequisites (install manually first)
 
-```bash
-# 1. Install chezmoi
-brew install chezmoi  # macOS
-# or
-sudo apt install chezmoi  # Debian/Ubuntu
-# or
-sudo pacman -S chezmoi  # Arch Linux
-# or
-choco install chezmoi  # Windows
+1. **Git**: `winget install Git.Git`
+2. **chezmoi**: `winget install twpayne.chezmoi`
 
-# 2. Apply this repository
+### Apply dotfiles
+
+```powershell
+# Clone and apply in one step
 chezmoi init https://github.com/JasonSMV/dotfiles.git
 chezmoi apply
 ```
 
+> chezmoi will automatically skip Linux-only configs (komorebi, yasb, whkdrc, glazewm)
+> when running on non-Windows via `.chezmoiignore` templates.
+
+---
+
+## What is tracked
+
+| Config | Windows Path |
+|--------|-------------|
+| Git config | `~\.gitconfig` |
+| Git shared config | `~\.config\git\` |
+| PowerShell profile | `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` |
+| Windows Terminal | `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json` |
+| VS Code settings | `%APPDATA%\Code\User\settings.json` |
+| Claude Code config | `~\.claude\CLAUDE.md`, `settings.json`, `RTK.md` |
+| OpenCode config (global) | `%APPDATA%\opencode\opencode.json`, `AGENTS.md`, `commands\`, `plugins\` |
+| OpenCode config (user) | `~\.config\opencode\opencode.json`, `settings.json`, `agents\`, `plugins\`, `profiles\` |
+| Komorebi (Windows WM) | `~\komorebi.json`, `komorebi.bar.json`, `komorebi.bar.monitor2.json` |
+| GlazeWM | `~\.glzr\glazewm\config.yaml` |
+| YASB (status bar) | `~\.config\yasb\` |
+| fastfetch | `~\.config\fastfetch\` |
+| mpv | `~\.config\mpv\` |
+| IdeaVim | `~\.ideavimrc` |
+
+## What is NOT tracked (intentionally)
+
+| File | Reason |
+|------|--------|
+| `~\.npmrc` | Contains Azure DevOps PAT token — manage separately |
+| `~\.claude\.credentials.json` | API keys |
+| `~\.claude\projects\` | Session data |
+| `~\.config\opencode\antigravity-accounts.json` | Auth tokens |
+| `~\.config\opencode\node_modules\` | Install artifact |
+
+---
+
 ## Daily Usage
 
-```bash
-# Add a new file to chezmoi management
-chezmoi add ~/.bashrc
-
-# Re-add a file (after external modifications)
-chezmoi re-add ~/.bashrc
+```powershell
+# Add a new file
+chezmoi add ~\.config\someapp\config.json
 
 # Edit a managed file
-chezmoi edit ~/.bashrc
+chezmoi edit ~\.config\someapp\config.json
 
-# Apply changes to your home directory
+# Check what has drifted
+chezmoi status
+
+# Preview changes without applying
+chezmoi diff
+
+# Apply all changes
 chezmoi apply
 
-# Pull latest changes from repository and apply
+# Pull latest from repo and apply
 chezmoi update
-
-# View what would change without applying
-chezmoi diff
 ```
 
-## Managing Your Dotfiles
+## Committing Changes
 
-```bash
-# Commit and push changes
-cd $(chezmoi source-path)
+```powershell
+cd (chezmoi source-path)
 git add .
-git commit -m "Update dotfiles"
+git commit -m "chore: update config"
 git push
 ```
 
+---
+
 ## Cross-Platform Configuration
 
-This dotfiles repository supports both **Windows** and **Linux** using chezmoi's template system.
+Git config uses chezmoi templates to support Windows and Linux from same source:
 
-### Why Cross-Platform?
+- **Windows**: `~\.gitconfig` (from `dot_gitconfig.tmpl`)
+- **Linux**: `~/.config/git/config` (from `dot_config/git/config.tmpl`)
 
-Git config files are stored in different locations depending on the OS:
+Common settings live in `.chezmoitemplates/gitconfig` — edit there for changes on all platforms.
 
-- **Linux/macOS**: `~/.config/git/config`
-- **Windows**: `~/.gitconfig`
+## Manual Configs (not auto-deployed)
 
-Additionally, some settings differ:
-
-- Email addresses (personal vs work)
-- Credential helper paths (`gh` location)
-
-### File Structure
-
-```
-.chezmoitemplates/
-    # Common templates - edit here for single-source updates
-    gitconfig          # Common git settings (diff, colors, aliases, etc.)
-    gitignore         # Common ignore rules (Python, Rust, Zig, etc.)
-    gittemplate       # Common commit message template
-
-# OS-specific destination files - these include the common templates
-dot_gitconfig.tmpl         # Windows: ~/.gitconfig
-dot_config/git/config.tmpl  # Linux: ~/.config/git/config
-
-# These files go to the same location on both OS
-dot_config/git/ignore.tmpl        # ~/.config/git/ignore
-dot_config/git/template.txt.tmpl  # ~/.config/git/template.txt
-```
-
-### How It Works
-
-1. **`.chezmoitemplates/`** contains the single source of truth for common config
-   - Edit these files when you want changes on both Windows and Linux
-
-2. **OS-specific files** (`dot_gitconfig.tmpl`, `dot_config/git/config.tmpl`)
-   - Contain platform-specific settings (email, credential helper path)
-   - Use `{{ template "gitconfig" }}` to include common settings from `.chezmoitemplates/`
-
-3. **Shared destination files** (`ignore.tmpl`, `template.txt.tmpl`)
-   - Same content on both OS (just copy to same location)
-   - Use `{{ template "gitignore" }}` and `{{ template "gittemplate" }}` to include common templates
-
-### Updating Common Settings
-
-To update settings that apply to both platforms, edit the files in `.chezmoitemplates/`:
-
-```bash
-# Edit common git settings
-chezmoi edit .chezmoitemplates/gitconfig
-
-# Edit common gitignore
-chezmoi edit .chezmoitemplates/gitignore
-
-# Edit common commit template
-chezmoi edit .chezmoitemplates/gittemplate
-```
+See `manual-configs/` for setup guides that require manual steps:
+- AltSnap, ExplorerPatcher, FlowLauncher, Nilesoft Shell, Windhawk, Thide
