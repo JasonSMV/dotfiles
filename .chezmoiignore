@@ -9,3 +9,27 @@ dot_glzr/glazewm
 
 manual-configs
 manual-configs/**
+
+# Claude Code — never track secrets or session data
+dot_claude/.credentials.json
+dot_claude/history.jsonl
+dot_claude/mcp-needs-auth-cache.json
+dot_claude/.last-cleanup
+dot_claude/.last-update-result.json
+dot_claude/.caveman-active
+dot_claude/projects/**
+dot_claude/session-env/**
+dot_claude/sessions/**
+dot_claude/shell-snapshots/**
+dot_claude/telemetry/**
+dot_claude/plugins/**
+
+# .npmrc — contains Azure DevOps PAT token
+dot_npmrc
+
+# OpenCode — never track auth tokens or node_modules
+dot_config/opencode/node_modules/**
+dot_config/opencode/antigravity-accounts.json
+dot_config/opencode/bun.lock
+dot_config/opencode/package-lock.json
+AppData/Roaming/opencode/node_modules/**
