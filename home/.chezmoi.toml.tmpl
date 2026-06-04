@@ -1,0 +1,16 @@
+{{- $name := promptStringOnce . "name" "Full name" -}}
+{{- $email := promptStringOnce . "email" "Personal email" -}}
+{{- $isWork := promptBoolOnce . "is_work" "Is this a work machine?" -}}
+{{- $workEmail := "" -}}
+{{- if $isWork -}}
+{{-   $workEmail = promptStringOnce . "work_email" "Work email" -}}
+{{- end -}}
+
+[cd]
+  command = "pwsh"
+
+[data]
+  name = {{ $name | quote }}
+  email = {{ $email | quote }}
+  is_work = {{ $isWork }}
+  work_email = {{ $workEmail | quote }}
