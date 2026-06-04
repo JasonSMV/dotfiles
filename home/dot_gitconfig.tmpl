@@ -1,7 +1,12 @@
-{{- $email := "jeison.martinez@trip-arc.com" -}}
 [user]
-	name = Jeison Martinez (TMT)
-	email = {{ $email }}
+	name = {{ .name }}
+	email = {{ if .is_work }}{{ .work_email }}{{ else }}{{ .email }}{{ end }}
+
+{{- if .is_work }}
+
+[includeIf "gitdir:~/{{ .work_dir }}/"]
+	path = ~/{{ .work_dir }}/.gitconfig
+{{- end }}
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -10,5 +15,6 @@
 	required = true
 
 [commit]
-    template = ~/.config/git/template.txt
+	template = ~/.config/git/template.txt
+
 {{ template "gitconfig" }}
