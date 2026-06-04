@@ -20,7 +20,7 @@ jobs:
 
       - name: Install chezmoi
         run: |
-          $url = "https://github.com/twpayne/chezmoi/releases/download/v2.69.4/chezmoi_2.69.4_windows_amd64.exe"
+          $url = "https://github.com/twpayne/chezmoi/releases/download/v2.69.4/chezmoi-windows-amd64.exe"
           Invoke-WebRequest $url -OutFile "$env:RUNNER_TOOL_CACHE\chezmoi.exe"
           echo "$env:RUNNER_TOOL_CACHE" | Out-File -FilePath $env:GITHUB_PATH -Append
         shell: pwsh
