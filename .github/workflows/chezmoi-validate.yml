@@ -19,8 +19,7 @@ jobs:
           persist-credentials: false
 
       - name: Install chezmoi
-        run: winget install twpayne.chezmoi --accept-package-agreements --accept-source-agreements
-        shell: pwsh
+        uses: chezmoi/install-action@v2
 
       - name: Seed chezmoi config
         run: |
@@ -38,6 +37,6 @@ jobs:
 
       - name: Initialize and apply
         run: |
-          chezmoi init --source="$env:GITHUB_WORKSPACE" --no-tty
-          chezmoi apply --source="$env:GITHUB_WORKSPACE" --no-tty --force
+          chezmoi init --source="${{ github.workspace }}" --no-tty
+          chezmoi apply --no-tty --force
         shell: pwsh
