@@ -1,0 +1,43 @@
+name: chezmoi-validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Install chezmoi
+        run: winget install twpayne.chezmoi --accept-package-agreements --accept-source-agreements
+        shell: pwsh
+
+      - name: Seed chezmoi config
+        run: |
+          New-Item -ItemType Directory -Force "$env:USERPROFILE\.config\chezmoi" | Out-Null
+          @"
+          [cd]
+            command = "pwsh"
+          [data]
+            name = "Test User"
+            email = "test@example.com"
+            is_work = false
+            work_email = ""
+          "@ | Set-Content "$env:USERPROFILE\.config\chezmoi\chezmoi.toml"
+        shell: pwsh
+
+      - name: Initialize and apply
+        run: |
+          chezmoi init --source="$env:GITHUB_WORKSPACE" --no-tty
+          chezmoi apply --source="$env:GITHUB_WORKSPACE" --no-tty --force
+        shell: pwsh
