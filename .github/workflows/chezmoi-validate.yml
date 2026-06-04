@@ -39,8 +39,6 @@ jobs:
           "@ | Set-Content "$env:USERPROFILE\.config\chezmoi\chezmoi.toml"
         shell: pwsh
 
-      - name: Initialize and apply
-        run: |
-          chezmoi init --source="${{ github.workspace }}" --no-tty
-          chezmoi apply --no-tty --force
+      - name: Apply
+        run: chezmoi apply --source="${{ github.workspace }}" --no-tty --force
         shell: pwsh
