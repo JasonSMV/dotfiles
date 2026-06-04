@@ -43,6 +43,10 @@ jobs:
         run: chezmoi apply --source="${{ github.workspace }}" --no-tty --force
         shell: pwsh
 
+      - name: Validate packages
+        run: pwsh "${{ github.workspace }}\packages\validate-packages.ps1" -BundlePath "${{ github.workspace }}\packages\packages.ubundle"
+        shell: pwsh
+
   validate-linux:
     runs-on: ubuntu-latest
     container: archlinux:latest
