@@ -16,14 +16,14 @@ try {
   exit 1
 }
 
-# Required fields per package
-$required = @("Id", "Name", "ManagerName")
+# Required fields per package — Id only enforced for winget
 $missing = @()
 foreach ($pkg in $bundle.packages) {
-  foreach ($field in $required) {
-    if (-not $pkg.$field) {
-      $missing += "$($pkg.Name): missing $field"
-    }
+  if (-not $pkg.ManagerName) {
+    $missing += "$($pkg.Name): missing ManagerName"
+  }
+  if ($pkg.ManagerName -eq "winget" -and -not $pkg.Id) {
+    $missing += "$($pkg.Name): missing Id (winget package)"
   }
 }
 if ($missing.Count -gt 0) {

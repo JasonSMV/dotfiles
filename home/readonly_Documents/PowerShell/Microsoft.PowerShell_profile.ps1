@@ -1,8 +1,14 @@
 ### Chris Titus Tech's PowerShell profile
 
-oh-my-posh init pwsh --config $Home\Documents\PowerShell\cobalt2.omp.json | Invoke-Expression
-zoxide init --cmd z powershell | Out-String | Invoke-Expression
-Import-Module -Name Terminal-Icons
+if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
+    oh-my-posh init pwsh --config $Home\Documents\PowerShell\cobalt2.omp.json | Invoke-Expression
+}
+if (Get-Command zoxide -ErrorAction SilentlyContinue) {
+    zoxide init --cmd z powershell | Out-String | Invoke-Expression
+}
+if (Get-Module -ListAvailable -Name Terminal-Icons) {
+    Import-Module -Name Terminal-Icons
+}
 
 Write-Host "Use 'Show-Help' to list all available functions" -ForegroundColor Yellow
 
