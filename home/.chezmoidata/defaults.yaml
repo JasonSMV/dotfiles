@@ -1,0 +1,9 @@
+# Static defaults auto-loaded as template variables
+# Reference in any template as {{ .work_dir }}, {{ .company }}, etc.
+
+company: trip-arc
+work_dir: TripArcRepos
+
+git:
+  default_branch: main
+  credential_helper: manager
