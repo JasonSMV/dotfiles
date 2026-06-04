@@ -7,9 +7,6 @@ dot_config/yasb
 dot_glzr/glazewm
 {{ end }}
 
-manual-configs
-manual-configs/**
-
 # Claude Code — never track secrets or session data
 dot_claude/.credentials.json
 dot_claude/history.jsonl
@@ -23,10 +20,6 @@ dot_claude/sessions/**
 dot_claude/shell-snapshots/**
 dot_claude/telemetry/**
 dot_claude/plugins/**
-
-# packages/ — reference only, not deployed to home dir
-packages
-packages/**
 
 # .npmrc — contains Azure DevOps PAT token
 dot_npmrc
