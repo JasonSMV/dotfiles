@@ -6,8 +6,10 @@
 {{-   $workEmail = promptStringOnce . "work_email" "Work email" -}}
 {{- end -}}
 
+{{- if eq .chezmoi.os "windows" }}
 [cd]
   command = "pwsh"
+{{ end -}}
 
 [data]
   name = {{ $name | quote }}

@@ -8,6 +8,7 @@ dot_glzr/glazewm
 dot_gitconfig.tmpl
 AppData
 readonly_Documents
+dot_claude/settings.json
 {{ end }}
 
 # Claude Code — never track secrets or session data
@@ -33,3 +34,4 @@ dot_config/opencode/antigravity-accounts.json
 dot_config/opencode/bun.lock
 dot_config/opencode/package-lock.json
 AppData/Roaming/opencode/node_modules/**
+AppData/Roaming/opencode/antigravity-accounts.json

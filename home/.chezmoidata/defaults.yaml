@@ -10,4 +10,3 @@ work_dir: TripArcRepos
 
 git:
   default_branch: main
-  credential_helper: manager
