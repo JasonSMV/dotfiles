@@ -1,6 +1,10 @@
 # Static defaults auto-loaded as template variables
 # Reference in any template as {{ .work_dir }}, {{ .company }}, etc.
 
+name: Jeison Martinez
+email: jeisonsmv@gmail.com
+is_work: false
+
 company: trip-arc
 work_dir: TripArcRepos
 

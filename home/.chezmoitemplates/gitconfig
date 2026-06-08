@@ -113,9 +113,6 @@
     diffFilter = diff-so-fancy --patch
     singlekey = true
 
-[credential]
-	helper = manager
-
 [column]
 	ui = auto 			     # Output in columns when possible
 
