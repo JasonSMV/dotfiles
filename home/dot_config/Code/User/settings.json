@@ -14,10 +14,19 @@
   "update.showReleaseNotes": false,
   "zenMode.hideLineNumbers": false,
   "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 8,
 
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
+  "vim.highlightedyank": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.insertModeKeyBindings": [
+    { "before": ["j", "k"], "after": ["<Esc>"] },
+  ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // Clear search highlights with Esc
+    { "before": ["<Esc>"], "commands": [":nohlsearch"] },
+
     // NAVIGATION
     // switch b/w buffers
     { "before": ["<S-h>"], "commands": [":bprevious"] },
@@ -61,7 +70,15 @@
       "commands": ["editor.action.quickFix"],
     },
     { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "f", "r"], "commands": ["workbench.action.openRecent"] },
+    { "before": ["leader", "f", "g"], "commands": ["workbench.action.findInFiles"] },
     { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    { "before": ["leader", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+    { "before": ["leader", "c", "r"], "commands": ["editor.action.rename"] },
+    { "before": ["leader", "c", "f"], "commands": ["editor.action.formatDocument"] },
+    { "before": ["leader", "c", "o"], "commands": ["editor.action.organizeImports"] },
+    { "before": ["<Tab>"], "commands": ["workbench.action.nextEditor"] },
+    { "before": ["<S-Tab>"], "commands": ["workbench.action.previousEditor"] },
     {
       "before": ["g", "h"],
       "commands": ["editor.action.showDefinitionPreviewHover"],
@@ -100,4 +117,6 @@
     "https://developer.microsoft.com/json-schemas/": true,
     "https://raw.githubusercontent.com": true,
   },
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 }
