@@ -15,7 +15,7 @@ Estimated total time: **1–3 hours** (mostly waiting for installs)
 
 ---
 
-## Stage 1 — Bootstrap (manual, no tools yet)
+## Stage 1: Bootstrap (manual, no tools yet)
 
 These MUST be installed before anything else. Open **PowerShell as Administrator**.
 
@@ -41,7 +41,7 @@ chezmoi --version    # should print chezmoi version
 
 ---
 
-## Stage 2 — Apply dotfiles via chezmoi
+## Stage 2: Apply dotfiles via chezmoi
 
 ```powershell
 # Clone repo and apply all dotfiles in one command
@@ -77,13 +77,13 @@ chezmoi diff     # should be empty
 
 ---
 
-## Stage 3 — Restore all applications via UniGetUI
+## Stage 3: Restore all applications via UniGetUI
 
 1. Open UniGetUI
 2. **Settings** → **Backup and Restore** → connect your Gist token  
    OR: **Software** tab → `⋯` → **Import packages** → paste Gist URL or use local `.ubundle`
 3. Review the 121 packages → click **Install selected**
-4. Walk away — this takes 20–60 min
+4. Walk away. This takes 20-60 min.
 
 **If scoop packages fail** — add buckets first:
 ```powershell
@@ -103,7 +103,7 @@ winget list | Measure-Object   # count installed winget packages
 
 ---
 
-## Stage 4 — Restore .npmrc (Azure DevOps feed)
+## Stage 4: Restore .npmrc (Azure DevOps feed)
 
 > ⚠️ This is NOT in dotfiles — contains a PAT token. Recreate manually.
 
@@ -130,7 +130,7 @@ npm whoami --registry https://pkgs.dev.azure.com/trip-arc/_packaging/trip-arc/np
 
 ---
 
-## Stage 5 — SSH keys
+## Stage 5: SSH keys
 
 SSH keys are NOT in dotfiles (private key must never be committed).
 
@@ -159,7 +159,7 @@ ssh -T git@github.com   # should say "Hi JasonSMV!"
 
 ---
 
-## Stage 6 — OpenCode plugins and packages
+## Stage 6: OpenCode plugins and packages
 
 ```powershell
 # Install OpenCode (if not already in UniGetUI bundle)
@@ -178,7 +178,7 @@ opencode --version
 
 ---
 
-## Stage 7 — Windows-specific manual steps
+## Stage 7: Windows-specific manual steps
 
 These cannot be automated. Do each one manually.
 
@@ -216,7 +216,7 @@ See `manual-configs/Windows-Settings/README.md` for documented tweaks (performan
 
 ---
 
-## Stage 8 — Final verification checklist
+## Stage 8: Final verification checklist
 
 Run these to confirm everything is working:
 

@@ -2,7 +2,7 @@
 
 My dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
-## Quick Start — New Windows Machine
+## Quick Start: New Windows Machine
 
 ### Prerequisites (install manually first)
 
@@ -62,7 +62,7 @@ Git config uses chezmoi templates to support Windows and Linux from same source:
 - **Windows**: `~\.gitconfig` (from `dot_gitconfig.tmpl`)
 - **Linux**: `~/.config/git/config` (from `dot_config/git/config.tmpl`)
 
-Common settings live in `.chezmoitemplates/gitconfig` — edit there for changes on all platforms.
+Common settings live in `.chezmoitemplates/gitconfig`. Edit there for changes on all platforms.
 
 ## Manual Configs (not auto-deployed)
 

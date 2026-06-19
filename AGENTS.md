@@ -110,7 +110,7 @@ chezmoi re-add ~/.config/opencode/opencode.json
 
 ## Commit Format
 
-`type: emoji description` — no ticket prefix for dotfiles changes.
+`type: emoji description`. No ticket prefix for dotfiles changes.
 
 `feat ✨` · `fix 🐛` · `refactor 🔨` · `chore 🧹` · `docs 📜` · `ci 📦`
 
