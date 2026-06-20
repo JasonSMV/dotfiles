@@ -59,7 +59,7 @@ chezmoi apply
 | Windows Terminal | `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json` |
 | VS Code settings | `%APPDATA%\Code\User\settings.json` |
 | Claude Code config | `~\.claude\CLAUDE.md`, `settings.json`, `RTK.md` |
-| OpenCode config | `%APPDATA%\opencode\` and `~\.config\opencode\` |
+| OpenCode config | `~\.config\opencode\` (NOT `%APPDATA%` — opencode uses `~/.config` on all platforms) |
 | GlazeWM | `~\.glzr\glazewm\config.yaml` |
 | YASB | `~\.config\yasb\` |
 | fastfetch | `~\.config\fastfetch\` |
@@ -252,7 +252,7 @@ chezmoi --version
 |-------|----------|
 | chezmoi applies but PowerShell profile errors | Run `. $PROFILE` to see exact error; often a missing module |
 | Windows Terminal settings don't apply | App may need to be installed first before chezmoi can write to the path |
-| OpenCode config missing after apply | The `%APPDATA%\opencode` path requires OpenCode to be installed first |
+| OpenCode config missing after apply | Config lives at `~\.config\opencode\` (`%USERPROFILE%\.config\opencode`) on Windows too — not `%APPDATA%` |
 | VS Code settings overwritten by sync | Disable Settings Sync in VS Code, then re-apply chezmoi |
 | Scoop packages fail | Add buckets first (see Stage 3) |
 | GlazeWM doesn't start | Requires Task Scheduler setup (see manual-configs) |

@@ -29,5 +29,3 @@ dot_config/opencode/node_modules/**
 dot_config/opencode/antigravity-accounts.json
 dot_config/opencode/bun.lock
 dot_config/opencode/package-lock.json
-AppData/Roaming/opencode/node_modules/**
-AppData/Roaming/opencode/antigravity-accounts.json

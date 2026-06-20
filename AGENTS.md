@@ -35,7 +35,7 @@ home/
 │   └── work-gitconfig          # work email override
 ├── dot_gitconfig.tmpl          → ~/.gitconfig          (Windows only)
 ├── dot_config/git/config.tmpl  → ~/.config/git/config  (Linux only)
-├── dot_config/opencode/        → ~/.config/opencode/
+├── dot_config/opencode/        → ~/.config/opencode/      (both platforms)
 ├── dot_claude/                 → ~/.claude/
 │   ├── exact_rules/            # behavior, code-style, git-conventions, workflow
 │   └── exact_skills/commit/    # /commit slash command
