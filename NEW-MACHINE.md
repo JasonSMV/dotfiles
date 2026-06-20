@@ -60,7 +60,6 @@ chezmoi apply
 | VS Code settings | `%APPDATA%\Code\User\settings.json` |
 | Claude Code config | `~\.claude\CLAUDE.md`, `settings.json`, `RTK.md` |
 | OpenCode config | `%APPDATA%\opencode\` and `~\.config\opencode\` |
-| Komorebi WM | `~\komorebi.json` etc. |
 | GlazeWM | `~\.glzr\glazewm\config.yaml` |
 | YASB | `~\.config\yasb\` |
 | fastfetch | `~\.config\fastfetch\` |
@@ -205,7 +204,7 @@ See `manual-configs/` in the dotfiles repo. Each subdirectory has a `README.md` 
 - Thide
 - Task Scheduler configs
 
-### 7d. GlazeWM / Komorebi autostart
+### 7d. GlazeWM autostart
 ```powershell
 # These need to be set up as startup tasks
 # See manual-configs/Task-Scheduler-Configs/README.md
@@ -256,7 +255,7 @@ chezmoi --version
 | OpenCode config missing after apply | The `%APPDATA%\opencode` path requires OpenCode to be installed first |
 | VS Code settings overwritten by sync | Disable Settings Sync in VS Code, then re-apply chezmoi |
 | Scoop packages fail | Add buckets first (see Stage 3) |
-| Komorebi/GlazeWM don't start | Requires Task Scheduler setup (see manual-configs) |
+| GlazeWM doesn't start | Requires Task Scheduler setup (see manual-configs) |
 | `.npmrc` auth fails | PAT may have expired — generate new one in Azure DevOps |
 | chezmoi prompts on apply | Use `chezmoi apply --force` to skip interactive prompts |
 

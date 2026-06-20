@@ -17,7 +17,7 @@ chezmoi init https://github.com/JasonSMV/dotfiles.git
 chezmoi apply
 ```
 
-> chezmoi will automatically skip Linux-only configs (komorebi, yasb, whkdrc, glazewm)
+> chezmoi will automatically skip Linux-only configs (yasb, glazewm)
 > when running on non-Windows via `.chezmoiignore` templates.
 
 ---

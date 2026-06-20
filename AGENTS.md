@@ -41,7 +41,7 @@ home/
 │   └── exact_skills/commit/    # /commit slash command
 ├── dot_bashrc                  → ~/.bashrc              (Linux only)
 ├── AppData/                    → %APPDATA%              (Windows only)
-└── komorebi*, dot_glzr/, dot_config/yasb/, dot_config/whkdrc  (Windows only)
+└── dot_glzr/, dot_config/yasb/  (Windows only)
 ```
 
 ---
@@ -70,7 +70,7 @@ Run `chezmoi data` to inspect all variables on the current machine.
 ## Cross-Platform
 
 Windows-only files are excluded on Linux via the `{{ if ne .chezmoi.os "windows" }}` block in `home/.chezmoiignore`:
-- `dot_gitconfig.tmpl`, `AppData/`, `dot_claude/settings.json`, `komorebi*.json`, `dot_glzr/glazewm/`, `dot_config/yasb/`, `dot_config/whkdrc`
+- `dot_gitconfig.tmpl`, `AppData/`, `dot_claude/settings.json`, `dot_glzr/glazewm/`, `dot_config/yasb/`
 
 Git config uses two outer templates sharing one partial:
 - Windows (`dot_gitconfig.tmpl`): `autocrlf = true`, `credential.helper = manager`

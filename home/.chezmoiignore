@@ -1,8 +1,4 @@
 {{ if ne .chezmoi.os "windows" }}
-komorebi.json
-komorebi.bar.json
-komorebi.bar.monitor2.json
-dot_config/whkdrc
 dot_config/yasb
 dot_glzr/glazewm
 dot_gitconfig.tmpl

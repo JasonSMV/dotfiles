@@ -191,33 +191,6 @@ For more information about configuration options, please visit their documentati
     color: var(--workspace_hover);
 }
 
-/*                          Komorebi                              */
-/*                 Workspaces                          */
-.komorebi-workspaces {
-    margin: 0;
-}
-.komorebi-workspaces .ws-btn {
-    background-color: transparent;
-    border: none;
-    padding: 0 2px;
-    margin: 0 2px 0 2px;
-    font-size: 14px;
-}
-.komorebi-workspaces .ws-btn.active {
-    color: var(--workspace_active);
-}
-.komorebi-workspaces .ws-btn.populated {
-    color: var(--workspace_inactive);
-}
-.komorebi-workspaces .ws-btn.empty {
-    color: var(--workspace_empty);
-}
-.komorebi-workspaces .ws-btn:hover,
-.komorebi-workspaces .ws-btn.populated:hover,
-.komorebi-workspaces .ws-btn.empty:hover {
-    color: var(--workspace_hover);
-}
-
 /*                Binding Mode                          */
 .glazewm-binding-mode {
     color: var(--text);

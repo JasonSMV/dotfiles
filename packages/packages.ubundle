@@ -222,20 +222,6 @@
       "ManagerName": "winget"
     },
     {
-      "Id": "LGUG2Z.komorebi",
-      "Name": "komorebi",
-      "Version": "0.1.41",
-      "Source": "winget",
-      "ManagerName": "winget"
-    },
-    {
-      "Id": "LGUG2Z.whkd",
-      "Name": "whkd",
-      "Version": "0.2.10",
-      "Source": "winget",
-      "ManagerName": "winget"
-    },
-    {
       "Id": "Microsoft.AppInstaller",
       "Name": "App Installer",
       "Version": "1.28.240.0",
@@ -814,13 +800,6 @@
       "Version": "0.43.0",
       "Source": "npm",
       "ManagerName": "npm"
-    },
-    {
-      "Id": "whkd",
-      "Name": "Whkd",
-      "Version": "0.2.10",
-      "Source": "extras",
-      "ManagerName": "scoop"
     },
     {
       "Id": "win32yank",
