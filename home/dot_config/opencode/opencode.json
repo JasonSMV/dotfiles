@@ -3,7 +3,6 @@
   "plugin": [
     "opencode-antigravity-auth@latest",
     "superpowers@git+https://github.com/obra/superpowers.git",
-    "./plugins/rtk.ts",
-    "./plugins/caveman/plugin.js"
+    "./plugins/rtk.ts"
   ]
 }
