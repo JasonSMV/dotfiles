@@ -105,7 +105,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "workbench.activityBar.location": "hidden",
-  "workbench.colorTheme": "Dark Modern",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
   "vim.useSystemClipboard": true,
   "json.schemaDownload.trustedDomains": {
     "https://schemastore.azurewebsites.net/": true,
